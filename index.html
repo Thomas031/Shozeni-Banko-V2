@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit par "Dark Angel Production</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Shozeni Banko</h1>
+        <section id="admin-section" style="display: none;">
+            <h2>Section Admin</h2>
+            <button onclick="addFunds()">Ajouter des fonds</button>
+            <button onclick="logout()">Déconnexion</button>
+            <label for="amountToAdd">Montant à ajouter:</label>
+            <input type="number" id="amountToAdd" placeholder="Entrez le montant à ajouter">
+        </section>
+    </header>
+    <main>
+        <section id="login-section">
+            <h2>Connexion</h2>
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" placeholder="Entrez votre nom d'utilisateur">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" placeholder="Entrez votre mot de passe">
+            <button onclick="login()">Se connecter</button>
+            <button onclick="accessAdmin()">Admin</button>
+        </section>
+        
+        <section id="admin-section-header" style="display: none;"> <!-- Nouvel ID ajouté ici -->
+            <h2>Section Admin</h2>
+            <button onclick="addFunds()">Ajouter des fonds</button>
+            <button onclick="withdrawFunds()">Retirer des fonds</button>
+            <button onclick="addAdmin()">Ajouter un admin</button>
+            <!-- Ajoutez ceci à l'endroit où vous souhaitez dans votre section admin -->
+            <button onclick="modifyAccountAdmin()">Modifier un compte utilisateur</button>
+        </section>
+
+        <section id="balance-section" style="display: none;">
+            <h2>Solde :</h2>
+            <p id="balance">0 €</p>
+        </section>
+        <section id="transaction-section" style="display: none;">
+            <h2>Effectuer une transaction</h2>
+            <input type="number" id="amount" placeholder="Entrez le montant">
+            <!-- Ajoutez ceci à l'endroit où vous souhaitez dans votre section transaction -->
+            <button onclick="transferFunds()">Virement</button>
+
+        </section>
+
+        <section id="logs-section" style="display: none;">
+            <h2>Historique des transactions</h2>
+            <ul id="transaction-logs"></ul>
+        </section>
+        
+
+        <section id="logs-section" style="display: none;">
+            <h2>Logs</h2>
+            <!-- Contenu des logs à afficher ici -->
+        </section>
+        
+        <section id="transaction-section" style="display: none;">
+            <h2>Effectuer une transaction</h2>
+            <input type="number" id="amount" placeholder="Entrez le montant">
+            <!-- Ajoutez le bouton d'achat ici -->
+            <button onclick="purchase()">Achat</button>
+        </section>
+
+        <button onclick="logout()" style="display: none;">Déconnexion</button>
+        <!-- Bouton de déconnexion à l'extérieur de la section Admin --> <button id="logout-button" onclick="logout()" style="display: none;">Déconnexion</button>
+        
+    </main>
+</body>
+
+</html>
